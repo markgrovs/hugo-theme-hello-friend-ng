@@ -3,7 +3,13 @@
   border-right: 1px solid;
   margin-right: 18px;
   z-index: 9999;
-
+  
+  input {
+    display: block;
+  }
+  input:checked ~ ul li a.appear{
+    display: none;
+  }
   .dark-theme & {
     background: #252627;
   }
@@ -55,7 +61,10 @@
     display: inline-block;
     margin-right: 15px;
     text-decoration: none;
-
+    
+    .appear {
+      display: block;
+    }
     &:hover {
       text-decoration: underline;
     }

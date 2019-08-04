@@ -1,8 +1,9 @@
-<nav class="menu">
+<nav class="menu" for="the-checkbox">
+    <input type="checkbox" id="the-checkbox"/>
     <ul class="menu__inner">
         {{- $currentPage := . -}}
         {{ range .Site.Menus.main -}}
-            <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+            <li><a class="appear" href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
         {{- end }}
     </ul>
 </nav>
