@@ -135,9 +135,15 @@
 
     {{ if .Params.comments }}
     <div id="comments" class="thin">
-        {{- partial "comments.html" . -}}
+        {{- with .Site.Params.staticman }}
+            {{- partial "comments.html" . -}}
+        {{- end }}
     </div>
     {{ end }}
+    <h2>Comments</h2>
+    {{ partial "staticman/form-comments.html" . }}
+    {{ partial "staticman/show-comments.html" . }}
+
     <!-- Webmentions -->
     {{ if .Site.Params.webmentions }}
     <div id="comments" class="thin">
