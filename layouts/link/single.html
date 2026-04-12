@@ -13,7 +13,7 @@
             | {{ i18n "postAvailable" }}
             {{ range .Translations }}
             <a href="{{ .Permalink }}"><span
-                    class="flag flag-icon flag-icon-{{ index $.Site.Data.langFlags (.Lang) }} flag-icon-squared"></span></a>
+                    class="flag flag-icon flag-icon-{{ index hugo.Data.langFlags (.Lang) }} flag-icon-squared"></span></a>
             {{ end}}
             {{ end }}
 
@@ -102,7 +102,7 @@
                     class="feather feather-user">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
-                </svg><a class="p-author h-card" href="{{ .Site.BaseURL }}">{{.Site.Author.name}}</a>
+                </svg><a class="p-author h-card" href="{{ .Site.BaseURL }}">{{.Site.Params.Author.name}}</a>
             </p>
 
         </div>

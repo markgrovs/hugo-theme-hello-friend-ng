@@ -8,7 +8,7 @@
 
 
 {{ $thisReplies := dict }}
-{{ range $k, $v := .Site.Data.webmentions }}    
+{{ range $k, $v := hugo.Data.webmentions }}    
     {{ with . }}
         {{ if eq .target $thisURL}}
             {{ $dValue := dict $k $v }}
